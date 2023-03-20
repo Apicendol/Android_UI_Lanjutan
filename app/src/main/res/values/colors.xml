@@ -2,6 +2,7 @@
 <resources>
     <color name="hijau">#2CDFC2</color>
     <color name="coklat">#e36d30</color>
+    <color name="mint">#ccfffa</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

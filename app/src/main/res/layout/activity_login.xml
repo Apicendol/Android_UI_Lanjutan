@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:background="@color/coklat"
+    android:background="@color/mint"
     tools:context=".Login">
 
     <TextView
@@ -67,7 +67,7 @@
         android:textSize="24sp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/Firstname"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonFirst" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
 
     <TextView
         android:id="@+id/HeaderLogin"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/HeaderLogin" />
 
     <EditText
-        android:id="@+id/editTextPersonFirst"
+        android:id="@+id/editTextUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

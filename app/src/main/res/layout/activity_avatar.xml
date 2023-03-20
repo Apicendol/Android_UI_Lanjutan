@@ -4,13 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mint"
     android:padding="20dp"
     tools:context=".Avatar">
+
+    <Button
+        android:id="@+id/btSend"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_green"
+        android:text="Send Data"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/mouth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btBack"
+        app:layout_constraintTop_toTopOf="@+id/btBack" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="500dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,7 +39,7 @@
         android:id="@+id/imgMata"
         android:layout_width="226dp"
         android:layout_height="75dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.496"
@@ -80,34 +96,35 @@
 
     <ImageView
         android:id="@+id/imgHidung"
-        android:layout_width="67dp"
-        android:layout_height="84dp"
-        android:visibility="invisible"
+        android:layout_width="56dp"
+        android:layout_height="72dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.575"
+        app:layout_constraintVertical_bias="0.614"
         app:srcCompat="@drawable/face_0002" />
 
     <ImageView
         android:id="@+id/imgMulut"
         android:layout_width="152dp"
         android:layout_height="63dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.692"
+        app:layout_constraintVertical_bias="0.745"
         app:srcCompat="@drawable/face_0000" />
 
     <ImageView
         android:id="@+id/imgAlis"
         android:layout_width="253dp"
         android:layout_height="51dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -121,27 +138,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="@drawable/button_green"
-        android:text="Logout"
+        android:text="Back"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/btProfile"
+        app:layout_constraintEnd_toEndOf="@+id/mouth"
+        app:layout_constraintEnd_toStartOf="@+id/btSend"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/eyes"
         app:layout_constraintTop_toBottomOf="@+id/eyes" />
-
-    <Button
-        android:id="@+id/btProfile"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_green"
-        android:text="Profile"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btBack"
-        app:layout_constraintTop_toTopOf="@+id/btBack" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

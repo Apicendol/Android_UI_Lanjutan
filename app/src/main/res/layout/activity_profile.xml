@@ -4,8 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mint"
     android:padding="20dp"
     tools:context=".Profile">
+
+    <Button
+        android:id="@+id/SendData"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_green"
+        android:text="Send Data"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btLogout"
+        app:layout_constraintStart_toStartOf="@+id/btAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/btAvatar" />
 
     <TextView
         android:id="@+id/userPhone2"
@@ -14,7 +28,7 @@
         android:layout_marginTop="32dp"
         android:text="Phone Number"
         android:textColor="@color/black"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/firstname"
         app:layout_constraintTop_toBottomOf="@+id/userMail" />
@@ -26,7 +40,7 @@
         android:layout_marginTop="32dp"
         android:text="Email"
         android:textColor="@color/black"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/firstname"
         app:layout_constraintTop_toBottomOf="@+id/userName" />
@@ -38,7 +52,7 @@
         android:layout_marginTop="32dp"
         android:text="Username"
         android:textColor="@color/black"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/firstname"
         app:layout_constraintTop_toBottomOf="@+id/userFirst" />
@@ -47,10 +61,10 @@
         android:id="@+id/userFirst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="First Name"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/firstname"
         app:layout_constraintTop_toBottomOf="@+id/firstname" />
 
@@ -61,7 +75,7 @@
         android:layout_marginTop="24dp"
         android:text="First Name"
         android:textColor="@color/black"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerProfile" />
@@ -70,10 +84,10 @@
         android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Username"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/firstname"
         app:layout_constraintTop_toBottomOf="@+id/username3" />
 
@@ -81,10 +95,10 @@
         android:id="@+id/userMail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Email"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/firstname"
         app:layout_constraintTop_toBottomOf="@+id/usermail2" />
 
@@ -92,10 +106,10 @@
         android:id="@+id/userPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Phone Number"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/firstname"
         app:layout_constraintTop_toBottomOf="@+id/userPhone2" />
 
@@ -103,32 +117,30 @@
         android:id="@+id/btLogout"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:background="@drawable/button_green"
         android:text="Logout"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/btAvatar"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userPhone" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/btAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/SendData" />
 
     <Button
         android:id="@+id/btAvatar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:background="@drawable/button_green"
         android:text="Avatar"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SendData"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btLogout"
-        app:layout_constraintTop_toTopOf="@+id/btLogout" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPhone" />
 
     <TextView
         android:id="@+id/headerProfile"

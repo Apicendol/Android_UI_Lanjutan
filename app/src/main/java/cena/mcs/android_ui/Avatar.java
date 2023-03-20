@@ -3,11 +3,14 @@ package cena.mcs.android_ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+
+import java.net.URLEncoder;
 
 public class Avatar extends AppCompatActivity {
 
@@ -19,13 +22,23 @@ public class Avatar extends AppCompatActivity {
         Button btBack = (Button) this.findViewById(R.id.btBack);
         btBack.setOnClickListener((View.OnClickListener) v -> Avatar.this.finish());
 
-        Button btnProfile = (Button) this.findViewById(R.id.btProfile);
-
-        btnProfile.setOnClickListener(v -> {
-            Intent profile = new Intent(Avatar.this, Profile.class);
-            Avatar.this.startActivity(profile);
-            finish();
+        Button btsenddata = (Button) this.findViewById(R.id.btSend);
+        btsenddata.setOnClickListener(v -> {
+            String contact = "+6281289083511";
+            String text = "Hello";
+            String url = "https://api.whatsapp.com/send?phone=" + contact + "&text=" + text;
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
         });
+
+//        Button btnProfile = (Button) this.findViewById(R.id.btProfile);
+//
+//        btnProfile.setOnClickListener(v -> {
+//            Intent profile = new Intent(Avatar.this, Profile.class);
+//            Avatar.this.startActivity(profile);
+//            finish();
+//        });
 
         CheckBox _eyebrows = findViewById(R.id.eyebrows);
         ImageView _imgAlis = findViewById(R.id.imgAlis);
